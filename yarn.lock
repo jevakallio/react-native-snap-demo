@@ -4196,9 +4196,19 @@ react-native-scripts@0.0.30:
     qrcode-terminal "^0.11.0"
     xdl "^41.0.0"
 
-react-native-snap-camera@^1.0.4:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/react-native-snap-camera/-/react-native-snap-camera-1.0.4.tgz#d009a832dff514bd38d92fba5410fa6975952197"
+react-native-snap-camera@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/react-native-snap-camera/-/react-native-snap-camera-1.0.5.tgz#fecc9784c580f6be663ed85194f3cad4f668e66c"
+
+react-native-snap-drag@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/react-native-snap-drag/-/react-native-snap-drag-1.0.0.tgz#6a2b240367a703b9d6e710750168ddc1c92eea0c"
+
+react-native-snap-text@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/react-native-snap-text/-/react-native-snap-text-1.0.3.tgz#bc6663fb83e7404b97dc2db118ec4778ba1d8165"
+  dependencies:
+    react-native-snap-drag "^1.0.0"
 
 "react-native-svg@https://github.com/expo/react-native-svg/archive/5.1.8-exp.0.tar.gz":
   version "5.1.8"
