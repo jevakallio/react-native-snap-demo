@@ -1,11 +1,15 @@
 // 1. Dependencies
 
 import React from 'react';
+
 import {
   StyleSheet,
+  StatusBar,
   Text,
   View
 } from 'react-native';
+
+import Camera from 'react-native-snap-camera';
 
 // 2. React Component
 export default class App extends React.Component {
@@ -17,10 +21,10 @@ export default class App extends React.Component {
         <View style={styles.header}>
           <Text style={styles.title}>Snap App</Text>
         </View>
+        <Camera type="front" />
       </View>
     );
   }
-
 }
 
 // 4. Styles

@@ -3655,11 +3655,7 @@ mz@^2.3.1, mz@^2.6.0:
     object-assign "^4.0.1"
     thenify-all "^1.0.0"
 
-nan@^2.3.3:
-  version "2.6.2"
-  resolved "https://registry.yarnpkg.com/nan/-/nan-2.6.2.tgz#e4ff34e6c95fdfb5aecc08de6596f43605a7db45"
-
-nan@~2.4.0:
+nan@^2.3.3, nan@~2.4.0:
   version "2.4.0"
   resolved "https://registry.yarnpkg.com/nan/-/nan-2.4.0.tgz#fb3c59d45fe4effe215f0b890f8adf6eb32d2232"
 
@@ -4199,6 +4195,10 @@ react-native-scripts@0.0.30:
     progress "^2.0.0"
     qrcode-terminal "^0.11.0"
     xdl "^41.0.0"
+
+react-native-snap-camera@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/react-native-snap-camera/-/react-native-snap-camera-1.0.4.tgz#d009a832dff514bd38d92fba5410fa6975952197"
 
 "react-native-svg@https://github.com/expo/react-native-svg/archive/5.1.8-exp.0.tar.gz":
   version "5.1.8"
@@ -5354,11 +5354,7 @@ whatwg-encoding@^1.0.1:
   dependencies:
     iconv-lite "0.4.13"
 
-whatwg-fetch@>=0.10.0:
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/whatwg-fetch/-/whatwg-fetch-2.0.3.tgz#9c84ec2dcf68187ff00bc64e1274b442176e1c84"
-
-whatwg-fetch@^1.0.0:
+whatwg-fetch@>=0.10.0, whatwg-fetch@^1.0.0:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/whatwg-fetch/-/whatwg-fetch-1.1.1.tgz#ac3c9d39f320c6dce5339969d054ef43dd333319"
 
