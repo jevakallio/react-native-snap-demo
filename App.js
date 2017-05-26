@@ -5,6 +5,7 @@ import React from 'react';
 import {
   StyleSheet,
   StatusBar,
+  Platform,
   Text,
   View
 } from 'react-native';
@@ -19,7 +20,8 @@ export default class App extends React.Component {
   // Component state
   state = {
     showTextInput: false,
-    showEmojiPicker: false
+    showEmojiPicker: false,
+    cameraType: 'simulate'
   }
 
   // Toggle between showing and hiding text input
@@ -32,24 +34,32 @@ export default class App extends React.Component {
     this.setState({ showEmojiPicker: !this.state.showEmojiPicker });
   }
 
+  toggleCamera() {
+    this.setState({ cameraType: this.state.cameraType === 'front' ? 'back' : 'front' });
+  }
+
   // 3. View expressed as JSX
   render() {
     return (
       <View style={styles.container}>
+        <StatusBar barStyle="light-content" backgroundColor="#2193FF" />
         <View style={styles.header}>
           <Text style={styles.title}>Snap App</Text>
           <View style={styles.buttons}>
             <Text style={styles.button} onPress={this.toggleTextInput.bind(this)}>
-              T
+              ✏️
             </Text>
             <Text style={styles.button} onPress={this.toggleEmojiPicker.bind(this)}>
               😀
+            </Text>
+            <Text style={styles.button} onPress={this.toggleCamera.bind(this)}>
+              { this.state.cameraType === 'front' ? '📷' : '🤦' }
             </Text>
           </View>
         </View>
         <SnapEmoji isVisible={this.state.showEmojiPicker}>
           <SnapText isVisible={this.state.showTextInput}>
-            <Camera type="simulate" />
+            <Camera type={this.state.cameraType} />
           </SnapText>
         </SnapEmoji>
       </View>
@@ -66,10 +76,14 @@ const styles = StyleSheet.create({
   header: {
     flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor: 'blue',
+    backgroundColor: '#2193FF',
     justifyContent: 'space-between',
     height: 80,
-    padding: 24
+    padding: 24,
+    marginTop: Platform.select({
+      ios: 0,
+      android: 24
+    })
   },
 
   title: {
@@ -82,7 +96,7 @@ const styles = StyleSheet.create({
   },
 
   button: {
-    fontSize: 35,
+    fontSize: 25,
     color: 'white',
     padding: 10
   }
