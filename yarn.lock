@@ -4204,6 +4204,12 @@ react-native-snap-drag@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/react-native-snap-drag/-/react-native-snap-drag-1.0.0.tgz#6a2b240367a703b9d6e710750168ddc1c92eea0c"
 
+react-native-snap-emoji@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/react-native-snap-emoji/-/react-native-snap-emoji-1.0.1.tgz#62437cecf1e75466347b898e17f5346c13999241"
+  dependencies:
+    react-native-snap-drag "^1.0.0"
+
 react-native-snap-text@^1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/react-native-snap-text/-/react-native-snap-text-1.0.3.tgz#bc6663fb83e7404b97dc2db118ec4778ba1d8165"

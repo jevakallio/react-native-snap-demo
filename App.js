@@ -11,18 +11,25 @@ import {
 
 import Camera from 'react-native-snap-camera';
 import SnapText from 'react-native-snap-text';
+import SnapEmoji from 'react-native-snap-emoji';
 
 // 2. React Component
 export default class App extends React.Component {
 
   // Component state
   state = {
-    showTextInput: false
+    showTextInput: false,
+    showEmojiPicker: false
   }
 
   // Toggle between showing and hiding text input
   toggleTextInput() {
     this.setState({ showTextInput: !this.state.showTextInput });
+  }
+
+  // Toggle between showing and hiding emoji picker
+  toggleEmojiPicker() {
+    this.setState({ showEmojiPicker: !this.state.showEmojiPicker });
   }
 
   // 3. View expressed as JSX
@@ -35,11 +42,16 @@ export default class App extends React.Component {
             <Text style={styles.button} onPress={this.toggleTextInput.bind(this)}>
               T
             </Text>
+            <Text style={styles.button} onPress={this.toggleEmojiPicker.bind(this)}>
+              😀
+            </Text>
           </View>
         </View>
-        <SnapText isVisible={this.state.showTextInput}>
-          <Camera type="simulate" />
-        </SnapText>
+        <SnapEmoji isVisible={this.state.showEmojiPicker}>
+          <SnapText isVisible={this.state.showTextInput}>
+            <Camera type="simulate" />
+          </SnapText>
+        </SnapEmoji>
       </View>
     );
   }

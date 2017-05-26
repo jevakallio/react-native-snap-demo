@@ -23,6 +23,7 @@
     "react": "16.0.0-alpha.6",
     "react-native": "^0.44.0",
     "react-native-snap-camera": "^1.0.5",
+    "react-native-snap-emoji": "^1.0.1",
     "react-native-snap-text": "^1.0.3"
   }
 }
